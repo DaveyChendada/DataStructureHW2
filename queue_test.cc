@@ -1,5 +1,5 @@
 #include "queue.h"
-#include "timer.c"
+#include "timer.h"
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
