@@ -5,13 +5,15 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 int
 main (int argc, char* argv[])
 {
-	int n = stoi(argv[1]);
-	int t = stoi(argv[2]);
+	int n = Integer.parseInt(argv[1]);
+	int t = Integer.parseInt(argv[2]);
+	
 	cout<<"n="<<n<<endl;
 	cout<<"t="<<t<<endl;
 }
