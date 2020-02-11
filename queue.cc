@@ -1,5 +1,7 @@
 #include "queue.h"
 #include "timer.h"
+#include<iostream>
+using namespace std;
 
 #define SIZE 10
 
@@ -41,7 +43,7 @@ float Queue::dequeue(){
 	return result;	
 }
 
-void Queue::queue_test(float n){
+void Queue::queue_test(int n){
 	while(n!=0){
 		enqueue(1.01);
 		dequeue();
