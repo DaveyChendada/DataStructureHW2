@@ -1,5 +1,5 @@
 #include "queue.h"
-#include "timer.h"
+#include "timer.c"
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -26,9 +26,10 @@ main (int argc, char* argv[])
 	while(t!=0){
 		test_queue.queue_test(n);
 		t--;
+		printf("The %d time\n", t);
 	}
 	long double t_ms = stopwatch_stop(timer);
-	printf("Average Time: %Lg", t_ms/t);
+	printf("Average Time: %Lg\n", t_ms);
 	stopwatch_destroy(timer);
 	return 0;
 	
