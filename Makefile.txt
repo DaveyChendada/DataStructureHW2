@@ -25,7 +25,7 @@ queue_test: queue.o, queue_test.o
 	$(CC) $(CFLAGS) $(COPTFLAGS) -o $@ -c $<
 
 clean:
-	rm -f core *.o *~ insertion-sort mergesort
+	rm -f core *.o *~ queue_test
 
 # eof
 © 2020 GitHub, Inc.
