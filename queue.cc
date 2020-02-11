@@ -6,6 +6,9 @@
 
 Queue::Queue(void){
 	_data = new float[SIZE];
+	size = SIZE;
+	_head = 0;
+	_tail = 0;
 }
 
 bool Queue::IsFull(){

@@ -19,7 +19,16 @@ main (int argc, char* argv[])
 	ss2 << argv[2];
 	ss1 >> n;
 	ss2 >> t;
+	Queue test_queue;
+	stopwatch_init();
+	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
+	stopwatch_start(timer);
+	while(t!=0){
+		test_queue.queue_test(n);
+		t--;
+	}
+	long double t_ms = stopwatch_stop(timer);
+	printf("Average Time: %Lg", t_ms/t)
 	
-	cout<<"n="<<n<<endl;
-	cout<<"t="<<t<<endl;
+	
 }

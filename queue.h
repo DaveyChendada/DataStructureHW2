@@ -6,7 +6,7 @@ class Queue
   public:
   Queue();
   /* implement copy constructor, assignment, destructor if needed */
-  void queue_test(float n);
+  void queue_test(int n);
   void enqueue(float value);
   float dequeue();
 
