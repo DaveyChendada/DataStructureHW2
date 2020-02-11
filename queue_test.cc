@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <bits/stdc++.h>
 #include <map>
-
+#include<iostream>
+#include <string>
 
 int
 main (int argc, char* argv[])
