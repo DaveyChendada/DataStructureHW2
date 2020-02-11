@@ -31,7 +31,7 @@ bool Queue::IsEmpty(){
 }
 
 void Queue::enqueue(float value){
-	assert(this != NULL && IsFull == false);
+	assert(this != NULL && IsFull() == false);
 	_data[_tail++] = value;
 	_tail %= size;
 }
