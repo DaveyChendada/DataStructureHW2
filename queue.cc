@@ -1,6 +1,7 @@
 #include "queue.h"
 #include "timer.h"
-#include<iostream>
+#include <assert.h>
+#include <iostream>
 using namespace std;
 
 #define SIZE 10
