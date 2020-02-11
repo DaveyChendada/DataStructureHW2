@@ -11,8 +11,14 @@ using namespace std;
 int
 main (int argc, char* argv[])
 {
-	int n = Integer.parseInt(argv[1]);
-	int t = Integer.parseInt(argv[2]);
+	int n;
+	int t;
+	stringstream ss1;
+	stringstream ss2;
+	ss1 << argv[1];
+	ss2 << argv[2];
+	ss1 >> n;
+	ss2 >> t;
 	
 	cout<<"n="<<n<<endl;
 	cout<<"t="<<t<<endl;
