@@ -23,10 +23,11 @@ main (int argc, char* argv[])
 	stopwatch_init();
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
 	stopwatch_start(timer);
-	while(t!=0){
+	int temp_t = t;
+	while(temp_t!=0){
 		test_queue.queue_test(n);
-		t--;
-		printf("The %d time\n", t);
+		temp_t--;
+		//printf("The %d time\n", t);
 	}
 	long double t_ms = stopwatch_stop(timer);
 	long double ave_t = t_ms / t;
