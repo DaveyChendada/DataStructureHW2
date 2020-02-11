@@ -4,9 +4,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <bits/stdc++.h>
-#include <map>
-#include<iostream>
+#include <map.h>
+#include <iostream>
 #include <string>
+using namespace std;
 
 int
 main (int argc, char* argv[])
