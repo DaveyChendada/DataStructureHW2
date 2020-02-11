@@ -49,9 +49,9 @@ float Queue::dequeue(){
 void Queue::queue_test(int n){
 	while(n!=0){
 		enqueue(1.01);
-		printf("enqueue success\n");
+		//printf("enqueue success\n");
 		dequeue();
-		printf("dequeue success\n");
+		//printf("dequeue success\n");
 		n--;
 	}	
 }

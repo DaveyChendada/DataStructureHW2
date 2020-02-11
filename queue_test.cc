@@ -29,7 +29,8 @@ main (int argc, char* argv[])
 		printf("The %d time\n", t);
 	}
 	long double t_ms = stopwatch_stop(timer);
-	printf("Average Time: %Lg\n", t_ms);
+	long double ave_t = t_ms / t;
+	printf("Average Time: %Lg\n", ave_t);
 	stopwatch_destroy(timer);
 	return 0;
 	
