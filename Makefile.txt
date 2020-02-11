@@ -3,26 +3,13 @@ CFLAGS =
 COPTFLAGS = -O3 -g
 LDFLAGS =
 
-default:
-	@echo "=================================================="
-	@echo "To build your sorting code, use:"
-	@echo "  make insertion-sort           # For Insertion sort"
-	@echo "  make insertion-sort-bisearch  # For Insertion sort with binary search"
-	@echo "  make mergesort    	           # For Mergesort"
-	@echo ""
-	@echo "To clean this subdirectory (remove object files"
-	@echo "and other junk), use:"
-	@echo "  make clean"
-	@echo "=================================================="
-
-# queue_test driver 
-queue_test: queue.o, queue_test.o
-	$(CC) $(COPTFLAGS) -o $@ $^
-
-
-
-%.o: %.cc
-	$(CC) $(CFLAGS) $(COPTFLAGS) -o $@ -c $<
+queue_test: queue_test.o timer.o queue.o
+queue_test.o: queue_test.cc
+	gcc -c queue_test.c -o queue_test.o
+timer.o: timer.c
+	gcc -c timer.c -o timer.o
+queue.o: queue.c
+	gcc -c queue.c -o queue.o
 
 clean:
 	rm -f core *.o *~ queue_test
