@@ -4,12 +4,7 @@ COPTFLAGS = -O3 -g
 LDFLAGS =
 
 queue_test: queue_test.o timer.o queue.o
-queue_test.o: queue_test.cc
-	gcc -c queue_test.c -o queue_test.o
-timer.o: timer.c
-	gcc -c timer.c -o timer.o
-queue.o: queue.c
-	gcc -c queue.c -o queue.o
+	$(CC) $(COPTFLAGS) -o queue_test queue_test.o queue.o
 
 clean:
 	rm -f core *.o *~ queue_test
