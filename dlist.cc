@@ -100,6 +100,8 @@ ListNode* DList::search_value(int value){
 		if(node->val == value){
 			return node;
 		}
+		node = node->next;
+		cnt--;
 	}
 	return NULL;
 }
