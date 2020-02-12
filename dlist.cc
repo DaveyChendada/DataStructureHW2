@@ -11,15 +11,9 @@ DList::DList(){
 }
 
 DList::~DList(){
-	ListNode* ptmp;
-	ListNode* pnode = head->next;
-	while(pnode != head){
-		ptmp = pnode;
-		pnode = pnode->next;
-		delete ptmp;
-	}
+	while(count>0)
+		remove(tail);
 	delete head;
-	head = NULL;
 }
 
 void DList::add_to_front(int val){
