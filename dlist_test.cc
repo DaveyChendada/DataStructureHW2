@@ -30,6 +30,7 @@ main (int argc, char* argv[])
 		cnt--;
 		printf("num: %d\n",list.last());
 	}
+	list.search_value(1);
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
 	for(i=0;i<100;i++){
 		printf("num: %d\n",list.last());
