@@ -39,6 +39,7 @@ void DList::add_to_front(int val){
 	else{
 		ListNode* pnode = head;
 		head->val = val;
+		head->next->prev = pnode;
 		head->next = pnode;
 		pnode->prev = head;
 		count++;
@@ -62,6 +63,7 @@ void DList::add_to_back(int val){
 	else{
 		ListNode* pnode = tail;
 		tail->val = val;
+		tail->prev->next = pnode;
 		tail->prev = pnode;
 		pnode->next = tail;
 		count++;
