@@ -1,13 +1,2 @@
-CC = g++
-CFLAGS =
-COPTFLAGS = -O3 -g
-LDFLAGS =
-
-queue_test: queue_test.o timer.o queue.o
-	$(CC) $(COPTFLAGS) -o queue_test queue_test.o queue.o
-
-clean:
-	rm -f core *.o *~ queue_test
-
-# eof
-© 2020 GitHub, Inc.
+queue_test: queue.cc queue.cc timer.c
+	g++ -o queue_test queue_test.cc queue.cc timer.c
