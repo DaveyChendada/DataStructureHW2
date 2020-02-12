@@ -21,7 +21,7 @@ main (int argc, char* argv[])
 	ss >> n;
 	DList list;
 	stopwatch_init();
-	srand(unsigned(time(NULL)))
+	srand(unsigned(time(NULL)));
 	int cnt = n;
 	while(cnt!=0){
 		list.add_to_back(cnt);
