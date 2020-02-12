@@ -6,7 +6,7 @@ using namespace std;
 
 DList::DList(){
 	head = new ListNode();
-	head = tail;
+	tail = head;
 	count = 0;
 }
 
