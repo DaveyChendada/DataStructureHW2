@@ -6,8 +6,7 @@ using namespace std;
 
 DList::DList(){
 	head = new ListNode();
-	head->prev = head->next = head;
-	tail = head;
+	head = tail;
 	count = 0;
 }
 
@@ -48,26 +47,12 @@ void DList::add_to_front(int val){
 }
 
 void DList::add_to_back(int val){
-	if(count==0){
-		head->val = val;
-		head->prev = head->next = head;
-		tail = head;
-		count++;
-	}
-	else if(count==1){
-		tail->val = val;
-		head->prev = head->next = tail;
-		tail->next = tail->prev = head;
-		count++;
-	}
-	else{
-		ListNode* pnode = tail;
-		tail->val = val;
-		tail->prev->next = pnode;
-		tail->prev = pnode;
-		pnode->next = tail;
-		count++;
-	}
+	ListNode* p = new ListNode();
+	p->val = val;
+	tail->next = p;
+	p->prev = tail;
+	tail = p;
+	count++;
 }
 
 int DList::first(){
