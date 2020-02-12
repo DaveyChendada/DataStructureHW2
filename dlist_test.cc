@@ -28,6 +28,7 @@ main (int argc, char* argv[])
 	}
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
 	for(i=0;i<100;i++){
+		printf("num: %d\n",list.last());
 		stopwatch_start(timer);
 		int rand_num = rand()%n + 1;
 		list.remove(list.search_value(rand_num));
