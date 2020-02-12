@@ -19,8 +19,8 @@ DList::~DList(){
 		pnode = pnode->next;
 		delete ptmp;
 	}
-	delete phead;
-	phead = NULL;
+	delete head;
+	head = NULL;
 }
 
 void DList::add_to_front(int val){
