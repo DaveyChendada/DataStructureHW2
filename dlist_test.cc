@@ -28,12 +28,10 @@ main (int argc, char* argv[])
 	while(cnt!=0){
 		list.add_to_back(cnt);
 		cnt--;
-		printf("num: %d\n",list.last());
 	}
 	list.search_value(1);
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
-	for(i=0;i<100;i++){
-		printf("num: %d\n",list.last());
+	for(i=0;i<10;i++){
 		stopwatch_start(timer);
 		int rand_num = rand()%n + 1;
 		printf("rand_num: %d\n",rand_num);
@@ -43,9 +41,9 @@ main (int argc, char* argv[])
 		result_t = result_t + t_ms;
 		printf("time_num: %Lg\n",result_t);
 		list.add_to_back(rand_num);
-		printf("num: %d\n",list.last());
+		printf("t=: %d\n",t);
 	}
-	printf("Time: %Lg\n", result_t/100);
+	printf("Time: %Lg\n", result_t/10);
 	stopwatch_destroy(timer);
 	return 0;
 }

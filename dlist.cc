@@ -78,7 +78,6 @@ ListNode* DList::search_value(int value){
 	int cnt = count;
 	while(node!=NULL){
 		printf("value is %d\n", node->val);
-		printf("size is %d\n", count);
 		if(node->val == value){
 			return node;
 		}
