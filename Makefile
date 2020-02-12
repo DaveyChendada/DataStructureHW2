@@ -17,6 +17,6 @@ dlist_test: dlist_test.o dlist.o timer.o
 	$(CC) $(CFLAGS) $(COPTFLAGS) -o $@ -c $<
 
 clean:
-	rm -f core *.o
+	rm -f core *.o dlist_test queue_test
 
 # eof
