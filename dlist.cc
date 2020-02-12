@@ -11,7 +11,7 @@ DList::DList(){
 	count = 0;
 }
 
-DList::DList(){
+DList::~DList(){
 	ListNode* ptmp;
 	ListNode* pnode = head->next;
 	while(pnode != head){

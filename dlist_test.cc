@@ -24,7 +24,7 @@ main (int argc, char* argv[])
 	while(cnt!=0){
 		list.add_to_back(cnt);
 		cnt--;
-		printf("num: %d\n"list.last()->val);
+		printf("num: %d\n",list.last()->val);
 	}
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
 	for(i=0;i<10000;i++){
