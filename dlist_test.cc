@@ -31,14 +31,16 @@ main (int argc, char* argv[])
 		printf("num: %d\n",list.last());
 		stopwatch_start(timer);
 		int rand_num = rand()%n + 1;
-		printf("num: %d\n",list.last());
+		printf("rand_num: %d\n",rand_num);
 		list.remove(list.search_value(rand_num));
 		printf("num: %d\n",list.last());
 		long double t_ms = stopwatch_stop(timer);
 		result_t += t_ms;
+		printf("time_num: %Lg\n",result_t);
 		list.add_to_back(rand_num);
+		printf("num: %d\n",list.last());
 	}
-	printf("Time: %Lg\n", result_t/10000);
+	printf("Time: %Lg\n", result_t/100);
 	stopwatch_destroy(timer);
 	return 0;
 }
