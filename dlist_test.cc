@@ -35,7 +35,7 @@ main (int argc, char* argv[])
 		list.remove(list.search_value(rand_num));
 		printf("num: %d\n",list.last());
 		long double t_ms = stopwatch_stop(timer);
-		result_t += t_ms;
+		result_t = result_t + t_ms;
 		printf("time_num: %Lg\n",result_t);
 		list.add_to_back(rand_num);
 		printf("num: %d\n",list.last());
