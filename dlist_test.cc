@@ -23,7 +23,7 @@ main (int argc, char* argv[])
 	DList list;
 	stopwatch_init();
 	seed = time(0);
-	srand(seed)
+	srand(seed);
 	int cnt = n;
 	while(cnt!=0){
 		list.add_to_back(cnt);
