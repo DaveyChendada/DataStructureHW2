@@ -7,6 +7,7 @@
 #include <string>
 #include <sstream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int
@@ -20,6 +21,7 @@ main (int argc, char* argv[])
 	ss >> n;
 	DList list;
 	stopwatch_init();
+	srand(unsigned(time(NULL)))
 	int cnt = n;
 	while(cnt!=0){
 		list.add_to_back(cnt);
@@ -30,9 +32,9 @@ main (int argc, char* argv[])
 	for(i=0;i<100;i++){
 		printf("num: %d\n",list.last());
 		stopwatch_start(timer);
-		int rand_num = rand();
+		int rand_num = rand()%n + 1;
 		printf("rand_num: %d\n",rand_num);
-		list.remove(list.search_value(rand_num));
+		list.remove(list.search_value(1));
 		printf("num: %d\n",list.last());
 		long double t_ms = stopwatch_stop(timer);
 		result_t = result_t + t_ms;
