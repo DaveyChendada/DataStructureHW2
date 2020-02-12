@@ -31,19 +31,15 @@ main (int argc, char* argv[])
 	}
 	list.search_value(1);
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
-	for(i=0;i<10;i++){
+	for(i=0;i<10000;i++){
 		stopwatch_start(timer);
 		int rand_num = rand()%n + 1;
-		printf("rand_num: %d\n",rand_num);
 		list.remove(list.search_value(rand_num));
-		printf("num: %d\n",list.last());
 		long double t_ms = stopwatch_stop(timer);
 		result_t = result_t + t_ms;
-		printf("time_num: %Lg\n",result_t);
 		list.add_to_back(rand_num);
-		printf("t=: %d\n",i);
 	}
-	printf("Time: %Lg\n", result_t);
+	printf("Time: %Lg\n", result_t/10000);
 	stopwatch_destroy(timer);
 	return 0;
 }
