@@ -43,7 +43,7 @@ main (int argc, char* argv[])
 		list.add_to_back(rand_num);
 		printf("t=: %d\n",i);
 	}
-	printf("Time: %Lg\n", result_t/10);
+	printf("Time: %Lg\n", result_t);
 	stopwatch_destroy(timer);
 	return 0;
 }
