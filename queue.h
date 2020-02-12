@@ -5,6 +5,7 @@ class Queue
 {
   public:
   Queue();
+  ~Queue();
   /* implement copy constructor, assignment, destructor if needed */
   void queue_test(int n);
   void enqueue(float value);

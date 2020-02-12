@@ -16,6 +16,10 @@ Queue::Queue(void){
 	_tail = 0;
 }
 
+Queue::~Queue(void){
+	delete[] _data;
+}
+
 bool Queue::IsFull(){
 	assert(this != NULL);
 	if((_tail + 1 ) % size == _head){
