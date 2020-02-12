@@ -30,7 +30,7 @@ main (int argc, char* argv[])
 	for(i=0;i<100;i++){
 		printf("num: %d\n",list.last());
 		stopwatch_start(timer);
-		int rand_num = rand()%n + 1;
+		int rand_num = rand();
 		printf("rand_num: %d\n",rand_num);
 		list.remove(list.search_value(rand_num));
 		printf("num: %d\n",list.last());
