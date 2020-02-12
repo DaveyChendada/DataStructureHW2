@@ -29,7 +29,7 @@ void DList::add_to_front(int val){
 	p->next = head->next;
 	p->prev = head;
 	head->next = p;
-	count++
+	count++;
 }
 
 void DList::add_to_back(int val){
