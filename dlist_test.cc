@@ -14,7 +14,7 @@ main (int argc, char* argv[])
 {
 	int n;
 	int i;
-	long double result_t;
+	long double result_t = 0;
 	stringstream ss;
 	ss << argv[1];
 	ss >> n;
