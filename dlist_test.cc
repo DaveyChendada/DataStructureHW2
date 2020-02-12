@@ -15,13 +15,15 @@ main (int argc, char* argv[])
 {
 	int n;
 	int i;
+	unsigned seed;
 	long double result_t = 0;
 	stringstream ss;
 	ss << argv[1];
 	ss >> n;
 	DList list;
 	stopwatch_init();
-	srand(unsigned(time(NULL)));
+	seed = time(0);
+	srand(seed)
 	int cnt = n;
 	while(cnt!=0){
 		list.add_to_back(cnt);
@@ -34,7 +36,7 @@ main (int argc, char* argv[])
 		stopwatch_start(timer);
 		int rand_num = rand()%n + 1;
 		printf("rand_num: %d\n",rand_num);
-		list.remove(list.search_value(1));
+		list.remove(list.search_value(rand_num));
 		printf("num: %d\n",list.last());
 		long double t_ms = stopwatch_stop(timer);
 		result_t = result_t + t_ms;
