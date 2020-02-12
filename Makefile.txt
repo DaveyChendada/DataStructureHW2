@@ -1,3 +1,0 @@
-all: 
-queue_test:
-	g++ queue_test.cc queue.cc timer.c -o queue_test
