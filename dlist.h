@@ -13,6 +13,7 @@ class DList
 {
   public:
   DList();
+  ~DList();
   /* implement copy constructor, assignment, destructor if needed */
   void add_to_front(int value);
   void add_to_back(int value);
@@ -27,6 +28,7 @@ class DList
   /* declare your data */
   ListNode* head;
   ListNode* tail;
+  int count;
 };
 
 #endif
