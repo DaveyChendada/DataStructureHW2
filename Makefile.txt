@@ -16,7 +16,7 @@ default:
 	@echo "=================================================="
 
 # Insertion sort driver 
-dlist_test: dlist_test.o dlist.o
+dlist_test:  dlist.o dlist_test.o
 	$(CC) $(COPTFLAGS) -o $@ $^
 
 # Inserttion sort with binary search
@@ -29,6 +29,8 @@ mergesort: driver.o sort.o mergesort.o
 
 %.o: %.cc
 	$(CC) $(CFLAGS) $(COPTFLAGS) -o $@ -c $<
+	
+
 
 clean:
 	rm -f core *.o *~ insertion-sort mergesort
