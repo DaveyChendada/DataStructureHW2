@@ -69,13 +69,11 @@ ListNode* DList::next(ListNode* node){
 ListNode* DList::search_value(int value){
 	ListNode* node = head->next;
 	int cnt = count;
-	while(cnt != 0){
+	while(node!=NULL){
 		if(node->val == value){
 			return node;
 		}
-		printf("value is %d\n", node->val);
 		node = node->next;
-		cnt--;
 	}
 	return NULL;
 }
