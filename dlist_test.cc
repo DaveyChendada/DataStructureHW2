@@ -41,7 +41,7 @@ main (int argc, char* argv[])
 		result_t = result_t + t_ms;
 		printf("time_num: %Lg\n",result_t);
 		list.add_to_back(rand_num);
-		printf("t=: %d\n",t);
+		printf("t=: %d\n",i);
 	}
 	printf("Time: %Lg\n", result_t/10);
 	stopwatch_destroy(timer);
