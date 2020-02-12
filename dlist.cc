@@ -52,8 +52,15 @@ int DList::last(){
 }
 
 void DList::remove(ListNode* node){
-	node->next->prev = node->prev;
-	node->prev->next = node->next;
+	ListNode* prev = node->prev;
+	if(node == tail){
+		prev->next = NULL;
+		tail = prev;
+	}
+	else{
+		prev->next = node->next;
+		node->next->prev = prev;
+	}
 	delete node;
 	count--;
 }
