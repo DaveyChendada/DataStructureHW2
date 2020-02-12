@@ -27,12 +27,13 @@ main (int argc, char* argv[])
 		printf("num: %d\n",list.last());
 	}
 	struct stopwatch_t* timer = stopwatch_create(); assert(timer);
-	for(i=0;i<10000;i++){
+	for(i=0;i<100;i++){
 		stopwatch_start(timer);
 		int rand_num = rand()%n + 1;
 		list.remove(list.search_value(rand_num));
 		long double t_ms = stopwatch_stop(timer);
 		result_t += t_ms;
+		list.add_to_back(rand_num);
 	}
 	printf("Time: %Lg\n", result_t/10000);
 	stopwatch_destroy(timer);
