@@ -23,27 +23,13 @@ DList::~DList(){
 }
 
 void DList::add_to_front(int val){
-	if(count==0){
-		head->val = val;
-		head->prev = head->next = head;
-		tail = head;
-		count++;
-	}
-	else if(count==1){
-		head->val = val;
-		head->prev = head->next = tail;
-		tail->next = tail->prev = head;
-		count++;
-	}
-	else{
-		ListNode* pnode = head;
-		head->val = val;
-		head->next->prev = pnode;
-		head->next = pnode;
-		pnode->prev = head;
-		count++;
-	}
-
+	ListNode* p = new ListNode();
+	p->val = val;
+	head->next->prev = p;
+	p->next = head->next;
+	p->prev = head;
+	head->next = p;
+	count++
 }
 
 void DList::add_to_back(int val){
@@ -81,7 +67,7 @@ ListNode* DList::next(ListNode* node){
 }
 
 ListNode* DList::search_value(int value){
-	ListNode* node = head;
+	ListNode* node = head->next;
 	int cnt = count;
 	while(cnt != 0){
 		if(node->val == value){
